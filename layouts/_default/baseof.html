@@ -30,19 +30,10 @@
 
     {{ block "body" . }}
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 {{ if not (or .Page.IsHome .Page.IsPage) }}col-lg-9{{ end }} blog-main">
 
           {{ block "main" . }}
           {{ end }}
 
-        </div>
-
-        {{ if not (or .Page.IsHome .Page.IsPage) }}
-          {{ partial "sidebar" . }}
-        {{ end }}
-
-      </div>
     </div>
     {{ end }}
 
